@@ -42,7 +42,13 @@ def main():
     "Steph"
     ]
 
-    houses = [LF12B, LF13C, LF12A, WARD1308]
+    houses = [
+    LF12B,
+    #LF13C,
+    #LF12A,
+    #WARD1308
+    ]
+
     people = []
     # Adds each person for each house to the list of people
     for i in houses:
@@ -85,9 +91,7 @@ def main():
         # Remove current choice of person from list of peeople
         people.remove(people[choice])
 
-
     printTeam(teamOne,teamTwo)
-
 
 def printTeam(teamOne,teamTwo):
     print('+========================================================================+')
