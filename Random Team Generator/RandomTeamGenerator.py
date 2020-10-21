@@ -2,11 +2,9 @@
 import random
 import sys
 
-# Python 2 User Warning
-if sys.version_info.major == 2:
-    print(
-    'WARN: Python 2 is no longer supported\n' +
-    'Upgrade to Python 3 for this project\n\n\n')
+# Use of Python 2 is discouraged
+# Install and configure pyenv and run $pyenv install 3.8.5
+checkSystem()
 
 
 def main():
@@ -50,29 +48,29 @@ def main():
 
     houses = [LF12B, LF13C, LF12A, WARD1308]
     people = []
-    #Adds each person for each house to the list of people
+    # Adds each person for each house to the list of people
     for i in houses:
         for j in range(len(i)):
             people.append(i[j])
 
-    #Each Team that a person can be a part of
+    # Each Team that a person can be a part of
     teamOne = []
     teamTwo = []
 
-    #Total Length
+    # Total Length
     totalLen = len(people)
-    #Total Number of People Remaining
+    # Total Number of People Remaining
     totalRangeRemaining = totalLen
-    #Starting teamChoice
+    # Starting teamChoice
     teamChoice = 0
 
-    #Loop through the Range of People
+    # Loop through the Range of People
     for i in range(totalLen):
-        #Get Random Person from List
+        # Get Random Person from List
         choice = random.choice(range(totalRangeRemaining))
 
-        #Based on teamChoice the next person in the loop
-        #will be added to that team and then the teamChoice is flipped
+        # Based on teamChoice the next person in the loop
+        # will be added to that team and then the teamChoice is flipped
         if teamChoice == 0:
             teamOne.append(people[choice])
             teamChoice = 1
@@ -83,12 +81,12 @@ def main():
         totalRangeRemaining -= 1
 
 
-        #First and Last Pick of the Drafts
+        # First and Last Pick of the Drafts
         if i == 0:
             print('First Pick: ' + people[choice])
         elif i == totalLen - 1:
             print('Last Pick: ' + people[0])
-        #Remove current choice of person from list of peeople
+        # Remove current choice of person from list of peeople
         people.remove(people[choice])
 
 
@@ -103,6 +101,18 @@ def printTeam(teamOne,teamTwo):
     print('Team 2:')
     print(', '.join(map(str, teamTwo)))
     print('+========================================================================+')
+
+
+
+
+
+def checkSystem():
+    # Python 2 User Warning
+    if sys.version_info.major == 2:
+        print(
+        'WARN: Python 2 is no longer supported\n' +
+        'Upgrade to Python 3 for this project\n\n\n')
+
 
 
 main()
