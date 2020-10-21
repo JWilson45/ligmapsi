@@ -4,7 +4,7 @@ def main():
     #Participants
     people = [
     #Aces
-    "Jake","Jaysen",
+    "Jake","Jason",
     #Kings
     "Filup","Jack",
     #Knights
