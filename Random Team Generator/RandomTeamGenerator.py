@@ -16,7 +16,7 @@ def main():
     #Queens
     "Lynnanne","Tori",
     #Jokers
-    "Alyssa","Ollie"
+    "Alyssa","Ollie",
     ]
 
     #Each Team that a person can be a part of
@@ -52,6 +52,7 @@ def main():
             print('First Pick: ' + people[choice])
         elif i == totalLen - 1:
             print('Last Pick: ' + people[0])
+        #Remove current choice of person from list of peeople
         people.remove(people[choice])
 
 
