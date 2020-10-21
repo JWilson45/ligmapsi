@@ -2,22 +2,49 @@ import random
 
 def main():
     #Participants
-    people = [
-    #Aces
-    "Jake","Jason",
-    #Kings
-    "Filup","Jack",
-    #Knights
-    "Zack","JC",
-    #Wizards
-    "Patrick","David",
-    #Botantists
-    "Gabriel","Evan",
-    #Queens
-    "Lynnanne","Tori",
-    #Jokers
-    "Alyssa","Ollie",
+    # 12B
+    LF12B = [
+    "Phill",
+    "Dave",
+    "Jake",
+    "Pat",
+    "Gabe",
+    "Evan"
     ]
+
+    # 1308
+    WARD1308 = [
+    "Jason",
+    "Zack",
+    "Jack",
+    "JC"
+    ]
+
+    # 13C
+    LF13C = [
+    "Lynnanne",
+    "Tori",
+    "Alyssa",
+    "Ollie"
+    ]
+
+    # 12A
+    LF12A = [
+    "Ashley",
+    "Carly",
+    "Lauren",
+    "Alexa",
+    "Gabby",
+    "Lexi",
+    "Steph"
+    ]
+
+    houses = [LF12B, LF13C, LF12A, WARD1308]
+    people = []
+    #Adds each person for each house to the list of people
+    for i in houses:
+        for j in range(len(i)):
+            people.append(i[j])
 
     #Each Team that a person can be a part of
     teamOne = []
@@ -60,13 +87,13 @@ def main():
 
 
 def printTeam(teamOne,teamTwo):
-    print('+================================================================+')
+    print('+======================================================================+')
     print('Team 1:')
     print ', '.join(map(str, teamOne))
-    print('------------------------------------------------------------------')
+    print('-----------------------------------------------------------------------')
     print('Team 2:')
     print ', '.join(map(str, teamTwo))
-    print('+================================================================+')
+    print('+======================================================================+')
 
 
 main()
