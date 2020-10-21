@@ -58,19 +58,31 @@ def main():
     total = len(people)
     total1 = str(total)
     print("Total number of people going: " + total1)
+    print("")
 
     # One by one select people at random from total list of people and put them on either team 1 or team 2
-    count = total
-    # count > 0
-    if true:
-        a = random.randrange(1, (count + 1))
-        team1.append(people[a])
-        del people[]
-        count -= 1
-        b = random.randrange(1, (count + 1))
-        team2.append(people[b])
+    flop = 0
 
-    # print(random.randrange(1,4))
+    for i in range(total):
+        index = random.randrange(0, total)
+        if flop == 0:
+            team1.append(people[index])
+            total -= 1
+            # print("Team 1: ")
+            # print(team1)
+            flop = 1
+        else:
+            team2.append(people[index])
+            total -= 1
+            # print("Team2: ")
+            # print(team2)
+            flop = 0
+        del people[index]
+    print("Team 1: ")
+    print(team1)
+    print("Team 2: ")
+    print(team2)
 
+    # Implement everything in different functions and also implement when space bar
 
 main()

@@ -1,4 +1,13 @@
+# Imports
 import random
+import sys
+
+# Python 2 User Warning
+if sys.version_info.major == 2:
+    print(
+    'WARN: Python 2 is no longer supported\n' +
+    'Upgrade to Python 3 for this project\n\n\n')
+
 
 def main():
     #Participants
@@ -91,13 +100,13 @@ def main():
     printTeam(teamOne,teamTwo)
 
 def printTeam(teamOne,teamTwo):
-    print('+======================================================================+')
+    print('+========================================================================+')
     print('Team 1:')
-    print ', '.join(map(str, teamOne))
-    print('-----------------------------------------------------------------------')
+    print(', '.join(map(str, teamOne)))
+    print('-------------------------------------------------------------------------')
     print('Team 2:')
-    print ', '.join(map(str, teamTwo))
-    print('+======================================================================+')
+    print(', '.join(map(str, teamTwo)))
+    print('+========================================================================+')
 
 
 main()
