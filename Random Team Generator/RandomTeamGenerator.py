@@ -2,10 +2,6 @@
 import random
 import sys
 
-# Use of Python 2 is discouraged
-# Install and configure pyenv and run $pyenv install 3.8.5
-checkSystem()
-
 
 def main():
     #Participants
@@ -113,6 +109,9 @@ def checkSystem():
         'WARN: Python 2 is no longer supported\n' +
         'Upgrade to Python 3 for this project\n\n\n')
 
+# Use of Python 2 is discouraged
+# Install and configure pyenv and run $pyenv install 3.8.5
+checkSystem()
 
-
+# Run code
 main()
