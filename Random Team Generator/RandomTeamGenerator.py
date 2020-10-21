@@ -4,9 +4,9 @@ def main():
     #Participants
     people = [
     #Aces
-    "Jake<3","Jason",
+    "Jake","Jaysen",
     #Kings
-    "Phill","Jack",
+    "Filup","Jack",
     #Knights
     "Zack","JC",
     #Wizards
@@ -54,7 +54,7 @@ def main():
             print('Last Pick: ' + people[0])
         people.remove(people[choice])
 
-        
+
     printTeam(teamOne,teamTwo)
 
 
