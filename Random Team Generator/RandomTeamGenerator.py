@@ -43,10 +43,10 @@ def main():
     ]
 
     houses = [
+    # LF12A,
     LF12B,
-    #LF13C,
-    #LF12A,
-    #WARD1308
+    LF13C,
+    WARD1308
     ]
 
     people = []
